@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Buttons</title>
+  <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+  <!--This is a simple HTML page with buttons to manipulate cart quantity-->
+
+  <button id="add-to-bag" onclick="cartQuantity ++;
+  document.querySelector('#cartSummary').innerText=`Your Bag has ${cartQuantity} items`;"> Add to Bag</button>
+
+  <button id="Wishlist" onclick="cartQuantity -= 1;
+  document.querySelector('#cartSummary').innerText=`Your Bag has ${cartQuantity} items`;"> Move to Wishlist</button>
+
+  <button id="bagAdd" onclick="cartQuantity += 2;
+  document.querySelector('#cartSummary').innerText=`Your Bag has ${cartQuantity} items`;"> Add 1+1 Sale item</button>
+
+  <h1 id="cartSummary"></h1>
+
+  <script>
+
+    // Initialize cart quantity
+    let cartQuantity = 0;
+    document.querySelector('#cartSummary').innerText = `Your Bag has ${cartQuantity} items`;
+
+  </script>
+</body>
+</html>
