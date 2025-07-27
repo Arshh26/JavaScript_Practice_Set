@@ -2,29 +2,29 @@
 <html lang="en">
 <head>
   <title>Finding Larger Number</title>
-
 </head>
 <body>
   <script>
-    function isLarger(num1, num2) {
-      if (num1 > num2) {
-        return num1;
-      } else if (num1 < num2) {
-        return num2;
-      }
+    // Two Types To Solve The Problem 
+    // 1. Using if-else 
+    function Larger(num1, num2) {
+    //   if (num1 > num2) {
+    //     return num1;
+    //   } else if (num1 < num2) {
+    //     return num2;
+    //   }
+    // }
+
+    // 2. Using Ternary Operator 
+   return num1 > num2 ? num1 : num2;
     }
-    
-      console.log(isLarger(4, 5));
-      console.log(isLarger(10, 5));
-      console.log(isLarger(45, 578));
-      console.log(isLarger(75, 78));
-      console.log(isLarger(53, 5));
-      console.log(isLarger(46, 0));
-
-      
-
-    
-  </script>
   
+      console.log(Larger(4, 5));
+      console.log(Larger(10, 5));
+      console.log(Larger(45, 578));
+      console.log(Larger(75, 78));
+      console.log(Larger(53, 5));
+      console.log(Larger(46, 0));
+  </script>
 </body>
 </html>
