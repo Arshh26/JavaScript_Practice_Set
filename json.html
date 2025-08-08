@@ -22,7 +22,21 @@
     console.log(viseVersa);
 
     console.log(typeof viseVersa);
+
+    let newProduct = {
+      name: 'Shirt',
+      price: '54',
+      ratings: {
+        stars: 5.2,
+        noOfReviews: 12,
+      },
+    };
+
+    let oldProduct= JSON.parse(viseVersa);
+    console.log(typeof oldProduct);
+    console.log(oldProduct);
     
+    oldProduct= JSON.stringify(oldProduct);
   </script>
   
 </body>
