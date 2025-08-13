@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greetings Based on Hours</title>
+</head>
+<body>
+  <h2 id="greetings"></h2>
+  <script>
+    
+  function doGreeting(personName = 'Dear'){
+    let date = new Date();
+    let hours = date.getHours();
+    let heading = document.querySelector('#greetings');
+    console.log(hours);
+  
+    
+    if (hours > 5 && hours < 12) {
+      heading.innerText = `Good Morning ${personName}`
+    } else if (hours > 12 && hours < 18) {
+      heading.innerText = `Good Afternoon ${personName}`
+    } else {
+      heading.innerText = `Good Night ${personName}`
+    }
+    }
+
+    doGreeting('Arshad Ali');
+    
+  </script>
+  
+</body>
+</html>
