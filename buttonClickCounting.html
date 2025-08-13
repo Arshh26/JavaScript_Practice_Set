@@ -4,19 +4,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Button Click Count</title>
+  <style>
+    .js-odd {
+      background-color: rgb(131, 192, 131)
+    }
+
+    .js-even {
+      background-color: rgb(85, 117, 121);
+    }
+    #button {
+      height: 50px;
+      width: 50px;
+      border: 2px solid;
+      border-radius: 120px;
+      font-size: 20px;
+    }
+  </style>
 </head>
 <button id="button" onclick ="buttonPressed();">0</button>
 <body>
   <script>
-    let noOfTimesClicked = 0;
-    function buttonPressed() {
-      let button = document.querySelector('#button');
-      noOfTimesClicked ++;
-      button.innerText = noOfTimesClicked;
+    let noOfTimesClicked = localStorage.getItem ('noOfTimesClicked') || 0;
 
+    function buttonPressed() {
+      noOfTimesClicked ++;
+      localStorage.setItem('noOfTimesClicked', noOfTimesClicked);
+      updateButton();
     }
 
+    function updateButton() { 
+    let button = document.querySelector('#button');
+      if (noOfTimesClicked % 2 === 0) {
+        button.classList.remove('js-odd');
+        button.classList.add('js-even');
+        } else {
+          button.classList.remove('js-even');
+          button.classList.add('js-odd');
+        }
+        button.innerText = noOfTimesClicked;
+      }
+      updateButton();
+      
+    
+
   </script>
-  
 </body>
 </html>
