@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Break and continue</title>
+</head>
+<body>
+  <script>
+    let num = 50;
+    /*Variable num is set to 50.
+     This value never changes in the loop.*/
+    for(let i = 0; i < 50; i++) {
+      /*Loop starts at i = 0, ends when i < 50 is false.
+        In theory, it should run 50 times (i = 0 to 49).*/
+      console.log(i);
+      /*Checks if num is exactly 40.
+      But num is 50 (and never changes), so this is always false.*/
+      if (i === 40) {
+        break;
+        /*Since the if condition never becomes true, break is never executed.
+        The loop completes all 50 iterations.*/
+      }
+    }
+
+    let arr = [4,8,5,9,6,7];
+    for(let i = 0; i < arr.length; i++) {
+      if (arr[i]===6) {
+        console.log(`Number found at the index ${i}`)
+        break;
+      }
+      console.log('Still looking')
+    }
+    
+// Continue using odd numbers
+    let nums = 25;
+    for(i = 0; i < 25; i++) {
+      if (i % 2 == 0) {
+        continue;
+      }
+      console.log(i);
+      i++
+    }
+  </script>
+</body>
+</html>

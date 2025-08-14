@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Array Particular Position</title>
+</head>
+<body>
+  <script>
+    function getElement(arr, position) {
+      return arr [position - 1]; //In JavaScript, return is a keyword used inside a function to send a value back to the place where the function was called.
+       /*position → the position we want, starting from 1 (not 0).
+       position - 1 → because JavaScript arrays are 0-indexed (first element is index 0), we subtract 1*/
+    }
+    let arr = [7,8,9,4,5,6,1,2,3];
+    console.log(getElement(arr, 3));
+  </script>
+</body>
+</html>
