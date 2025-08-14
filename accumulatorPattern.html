@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Accumulator Pattern</title>
+</head>
+<body>
+  <script>
+    let nums = [1,8,3,7,4];
+    /*nums is an array holding five numbers: 1, 8, 3, 7, 4.
+    Each value has an index*/
+
+    let sum = 0; //sum = 0 → Accumulator variable starts at 0.
+    for(let i = 0; i < nums.length; i++)  { //Loop runs from i = 0 to i < nums.length (5 times total).
+      sum += nums[i]; // → Adds the current array element to sum. Here i = index.
+    }
+    console.log(`sum of Array is ${sum}`);
+
+    let squares = []; // Creates an empty array.
+    for (let i = 0; i < nums.length; i++) {
+      squares[i] = nums[i] * nums[i];
+      //For each element in nums, we store its square at the same index in squares.
+    }
+    console.log(squares);
+  </script>
+  
+</body>
+</html>
