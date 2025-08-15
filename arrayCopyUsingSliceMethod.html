@@ -10,6 +10,17 @@
     console.log(myArr.slice(3, 5));
     /*Start at index 3 (which is value 4
     end = 5 → Stop before index 5 (which is value 6).*/
+
+    function arrCopy(arr) {
+      return arr.slice(0, 4);
+      
+    }
+
+    let arr = [4,5,6,7,8];
+    let arr2 = arrCopy(arr);
+    arr2[0] = null;
+    console.log(arr);
+    console.log(arr2);
   </script>
 </body>
-</html>
+</html>  
