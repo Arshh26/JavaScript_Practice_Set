@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Set Timeout</title>
+</head>
+<body>
+  <script>
+    let alarm = function() {
+      console.log('Goog Morning')
+    };
+    setTimeout(alarm, 2000);
+
+
+    setTimeout( () => console.log('Subha Hogayi Uth jaawo'), 5000);
+    console.log('Alarm Set')
+
+    let myAlarm = () => console.log('Wake Up');
+    let timerId = setTimeout(myAlarm, 5000);
+    console.log(`Alaram set with Timer Id: ${timerId}`);
+    clearTimeout(timerId);
+  </script>
+</body>
+</html>
