@@ -15,9 +15,15 @@
     console.log('Alarm Set')
 
     let myAlarm = () => console.log('Wake Up');
+    /*Here you define an arrow function named myAlarm.
+     If called, it prints "Wake Up" to the console.*/
     let timerId = setTimeout(myAlarm, 5000);
+    /*setTimeout schedules the function myAlarm to run after 5000 milliseconds (5 seconds).
+    It returns a timer ID, which is stored in timerId. This ID can be used to cancel the timer.*/
     console.log(`Alaram set with Timer Id: ${timerId}`);
     clearTimeout(timerId);
+    /*This cancels the timer that was scheduled with setTimeout.
+    Because of this, "Wake Up" will never get printed — since you cleared the timer before it executed.*/
   </script>
 </body>
 </html>
