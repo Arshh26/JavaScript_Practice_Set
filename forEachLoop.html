@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>For Each Loop</title>
+</head>
+<body>
+  <script>
+    let arr = [3,5,7,9,5,1];
+    for(let i = 0; i < arr.length; i++) {
+      console.log(arr[i]);
+    }
+    //Single line
+    arr.forEach((num) => console.log(num));
+
+    //can be used in this method also 
+
+    let myArr = [1,2,3,4,5,6];
+    for(let i = 0; i < arr.length; i++) {
+      console.log(myArr[i]);
+    }
+    myArr.forEach(function(num) {
+       console.log(num); //Num is a Just Parameter
+   });
+   /* on first Loop num will be 1
+      on second loop num will be 2,
+      on Third loop num will be 3,...so on */
+    
+
+     
+  </script>
+  
+</body>
+</html>

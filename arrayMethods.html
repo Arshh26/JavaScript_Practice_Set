@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Array Methods</title>
+</head>
+<body>
+  <script>
+    // Array Method: filter
+    let arr = [1,2,3,4,5,6,7,8,9];
+    let odds = arr.filter((num, index)=>{
+      if(num % 2 === 1) {
+        return false;
+      } else { 
+        return true;
+      }
+    });
+    console.log(odds);
+
+    // Array Method: Map
+    let myArr = [1,2,3,4];
+    let squares = myArr.map(num => num * num);
+    console.log(squares);
+  </script>
+  
+</body>
+</html>
