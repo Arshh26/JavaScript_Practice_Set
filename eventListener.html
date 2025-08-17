@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Event Listener</title>
+</head>
+<body>
+  <button id="my-btn">Click Me</button>
+  <script>
+    let buttonElement = document.querySelector('#my-btn');
+    let behaviour = event => console.log('I am Clicked')
+    buttonElement.addEventListener('click', behaviour);
+  </script>
+</body>
+</html>

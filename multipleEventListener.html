@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Multiple Even Listener </title>
+</head>
+<body>
+   <button id="my-btn">Click Me</button>
+  <script>
+    let buttonElement = document.querySelector('#my-btn');
+    let behaviour = event => console.log('I am Clicked')
+    buttonElement.addEventListener('click', behaviour);
+
+    let printDate = event => console.log(new Date());
+    buttonElement.addEventListener('click', printDate);
+  </script>
+  
+</body>
+</html>

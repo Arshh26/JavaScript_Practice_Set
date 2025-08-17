@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Removing Event listener</title>
+</head>
+<body>
+   <button id="my-btn">Click Me</button>
+  <script>
+    let buttonElement = document.querySelector('#my-btn');
+    let behaviour = event => console.log('I am Clicked')
+    buttonElement.addEventListener('click', behaviour);
+
+    let printDate = event => console.log(new Date());
+    buttonElement.addEventListener('click', printDate);
+
+    buttonElement.removeEventListener('click', behaviour);
+    //removes the Event Listener.
+  </script>
+  
+</body>
+</html>

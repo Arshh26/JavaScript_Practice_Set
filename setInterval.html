@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Set Interval</title>
+</head>
+<body>
+  <script>
+    let alarm = () => console.log(`Good morning, Arshad Ali. ${new Date()}`)
+
+    // let intervalId = setInterval(alarm, 5000);
+    // clearInterval(intervalId);
+
+    let myIntervalId = setInterval(alarm, 1000);
+    setTimeout(() => clearInterval(myIntervalId), 5000);
+  </script>
+  
+</body>
+</html>
