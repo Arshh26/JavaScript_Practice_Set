@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Executing Method Twice</title>
+</head>
+<body>
+  <script>
+    let printGreeting = () => console.log ('Good Morning');
+    let runTwice = inputFunction => {
+      inputFunction();
+      inputFunction();
+    };
+    runTwice(printGreeting);
+  </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Button Interactive With Time</title>
+  <style>
+    .subscribe {
+      height: 20px;
+      width: 80px;
+      font-size: 15px;
+      color: white;
+      background-color: rgb(247, 4, 4);
+      border-radius: 5px;
+      border: none;
+
+    }
+    .js-size-btn {
+      height: 40px;
+      width: 160px;
+      font-size: 30px;
+    }
+    button {
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+  <button class="subscribe">Subscribe</button>
+  <script>
+    let buttonElement = document.querySelector('.subscribe');
+    buttonElement.addEventListener('click', event => setTimeout(doubleTheSize, 2000))
+
+    function doubleTheSize() {
+      let buttonElement = document.querySelector('.subscribe');
+      buttonElement.classList.add('js-size-btn');
+    }
+  </script>
+</body>
+</html>
